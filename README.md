@@ -160,7 +160,7 @@ Crown EEG  → Deno Crown bridge
                 ↓
       Context-aware output mapper
                 ↓
-          OSC → Ableton
+               OSC → Ableton
 ```
 
 **Done when:** The same physical key produces meaningfully different output depending on measured mental state.
