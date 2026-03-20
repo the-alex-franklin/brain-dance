@@ -49,7 +49,7 @@ Ableton Live Suite (audio engine, VSTs, plugins)
 
 ## Milestone 1 — The Lemon Test (MVP)
 
-**Goal:** Think about biting into a sour lemon. Hear a bass note.
+**Goal:** Think about biting into a sour lemon. Hear a note.
 
 **Stack for this milestone:** Crown → OSC (built-in) → Max for Live. No Deno.
 
