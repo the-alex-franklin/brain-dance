@@ -7,7 +7,7 @@
 
 The brain already has one voice box. This is a second one.
 
-The first translates thought into speech — words, tone, inflection. It's been there since birth, refined over a lifetime, and most people never think about it. This system is the same idea applied to music. A speaker that doesn't play music *at* you, but speaks *for* you — a direct extension of your nervous system into sound.
+The first translates thought into speech — words, tone, inflection. It's been there since birth, refined over a lifetime, and most of the time, we don't even think about it. This system is the same idea applied to music. A speaker that doesn't play music *at* you, but speaks *for* you — a direct extension of your nervous system into sound.
 
 A bidirectional learning system that maps real-time EEG data from a Neurosity Crown to musical parameters in Ableton Live. The performer's mental state drives the music. Over time, the system learns the performer's unique neural signatures and the performer learns what their mind can control. The interface becomes increasingly personal — nobody else's brain would play it the same way.
 
