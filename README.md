@@ -1,5 +1,5 @@
 # Brain Dance
-### Neural Music Interface — Design Spec & Roadmap v0.3
+### Neural Music Interface — Design Spec & Roadmap v0.4
 
 ---
 
@@ -24,7 +24,7 @@ Crown (EEG hardware)
 Deno/TypeScript (intelligence layer — phases 2+)
   ↓ OSC messages (npm:node-osc)
 
-Max for Live — ES5 JS (dumb receiver)
+Max for Live — OSC receiver (dumb receiver)
   ↓ LiveAPI parameter mapping via Macro knobs
 
 Ableton Live Suite (audio engine, VSTs, plugins)
@@ -61,8 +61,8 @@ The Crown's built-in Perform Mode OSC output streams processed focus/calm/band-p
    - Enable Perform Mode in the Crown SDK/app
    - Confirm UDP packets arriving on port 9000
 
-2. **Build Max for Live receiver (ES5 JS)**
-   - `udpreceive 9000` object listens for Crown OSC
+2. **Build Max for Live receiver**
+   - `udpreceive 9000` object listens on the OSC port — Max handles the transport layer natively, no custom networking code needed
    - Parse incoming band-power values
    - Identify which band/channel spikes on the lemon event (likely gamma)
    - Threshold detection: value exceeds threshold → fire MIDI note
@@ -78,7 +78,9 @@ The Crown's built-in Perform Mode OSC output streams processed focus/calm/band-p
    - Log which band/channel produces the strongest, most consistent response
    - Tune threshold accordingly
 
-### Max for Live ES5 JS Notes
+### Max for Live Notes
+
+Max for Live receives OSC natively via the `udpreceive` object — the protocol handling is Max's job, not the script's. Any JS written inside Max for Live runs in Max's internal scripting environment, which has its own constraints separate from OSC:
 
 - No async — use `Task` object for timing
 - No modules — single file, everything in scope
